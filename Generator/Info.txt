@@ -1,0 +1,32 @@
+﻿
+/*
+    - Ein Team besteht aus zwei Spielern
+    - Ein Gegner besteht aus drei Teams
+    - Eine Runde besteht aus zwei Gegnern und einem Schiri
+    - Jedes Team ist maximal 1x Schiri
+    - Jedes Team spielt in fünf Spielen
+
+    Man führt zwei Listen,
+        - eine mit den ausgewählten Schiris,
+        - eine mit allen bereits einmal zusammenspielenden Teams
+
+    Jetzt fängt man an:
+        - Man nimmt eine Urne mit so vielen Kugeln wie Teams (42)
+        - Man zieht sechs Kugeln für die Schiris der ersten beiden Runden
+            - Wenn ein Team bereits Schiri war, zieht man dafür eine neue
+        - Man zieht immer drei Kugeln, um einen Gegner zu erstellen
+            - Haben Teams daraus bereits zusammen gespielt, nimmt man drei neue
+        - Hat man eine Kombi, die noch nie zusammen gespielt hat, merkt man sie sich
+            als neuer Gegner und macht drei Einträge in die Liste der bereits
+            zusammenspielenden Teams (1, 2; 1, 3; 2, 3)
+        - Man zieht neue Gegner, bis
+            - die Urne leer ist: Dann hat man die ersten zwei Runden aller Felder
+                ermittelt, und fängt für die nächsten zwei oben an
+            - einfach keine gültigen Kombinationen entstehen: In dem Fall
+                macht man alles rückgängig, was man mit der aktuellen Urnenfüllung
+                gemacht hat und fängt mit einer neuen vollen Urne wieder oben an
+        - Irgendwann hat man genug Gegner ausgelost, sodass jedes Team fünf Spiele
+            spielen muss
+        - Dann ordnet man diese richtig zu, sodass nie zwei Teams zeitgleich mehrere
+            Spiele im Plan haben
+*/
