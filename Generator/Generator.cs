@@ -57,14 +57,32 @@ namespace Volleyball {
                        ).FirstOrDefault();
             }
 
+            // Prüft, ob eine Überschneidung drin vorkommt, also ob ein Team zur selben Zeit
+            // auf mehr als einem Feld stehen muss
+            private bool uebersch(List<Opponent> opps) {
+                var liste = new List<int>();
+
+                foreach (var o in opps) {
+                    liste.Add(o.Item1);
+                    liste.Add(o.Item2);
+                    liste.Add(o.Item3);
+                }
+
+                return liste.Count != liste.Distinct().Count();
+            }
+
             private bool calculateStep(bool lastStep) {
                 var urn = generateNewUrn();
 
-                var s = drawSchiris(urn);
-                currentStep.schiris.AddRange(s);
-                urn = urn.Except(s).ToList();
-
-
+                if (urn.Count == 42) {
+                    var s = drawSchiris(urn);
+                    currentStep.schiris.AddRange(s);
+                    urn = urn.Except(s).ToList();
+                }
+                else {
+                    currentStep.schiris.AddRange(new[] { 0, 0, 0, 0, 0, 0 });
+                }
+                
                 // HACK: In the last step, remove all Teams that have never been Schiri, so that
                 // they won't get a sixth game assigned.
                 if (lastStep) {
@@ -82,9 +100,9 @@ namespace Volleyball {
 
                     // Wir haben drei Leute, die wir jetzt in die benutzte Liste einfügen und dann
                     // generieren wir daraus einen neuen Gegner
-                    currentStep.usedCombis.Add(new Combi(g.Item1, g.Item2));
-                    currentStep.usedCombis.Add(new Combi(g.Item1, g.Item3));
-                    currentStep.usedCombis.Add(new Combi(g.Item2, g.Item3));
+                    currentStep.usedCombis.Add(new Team(g.Item1, g.Item2));
+                    currentStep.usedCombis.Add(new Team(g.Item1, g.Item3));
+                    currentStep.usedCombis.Add(new Team(g.Item2, g.Item3));
 
                     currentStep.opponents.Add(g);
 
