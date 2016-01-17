@@ -108,6 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddInRibbon.Designer.cs">
+      <DependentUpon>AddInRibbon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tabelle1.cs">
       <DependentUpon>Auswertung.xlsx</DependentUpon>
@@ -151,6 +157,9 @@
     <Compile Include="ThisWorkbook.Designer.cs">
       <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddInRibbon.resx">
+      <DependentUpon>AddInRibbon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
