@@ -13,20 +13,43 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <DefineConstants>VSTO40</DefineConstants>
     <OfficeApplication>Excel</OfficeApplication>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ProjectGuid>{C1C3988B-66C9-4502-AF3C-6EB60D54D863}</ProjectGuid>
     <SolutionID>83aada0e-93e8-40af-b378-d6e9c7b95ed4</SolutionID>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>de</TargetCulture>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateInterval>0</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>Auswertung</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>Auswertung</FriendlyName>
+    <OfficeApplicationDescription />
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 und x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
-      <Visible>false</Visible>
-      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010-Tools für Office-Laufzeit %28x86 und x64%29 Language Pack - DEU</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
@@ -228,14 +251,14 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Auswertung.xlsx" HostPackage="{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}" OfficeVersion="12.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Programme\Microsoft Office\Office12\Excel.exe" DebugInfoCommandLine="&quot;[$OUTPUT]Auswertung.xlsx&quot;" />
-        <Host Name="Excel Document" Path=".\Auswertung.xlsx" GeneratedCodeNamespace="Auswertung">
-          <HostItem Name="Tabelle1" Code="Tabelle1.cs" CanonicalName="Tabelle1" DisplayName="Erläuterungen" Blueprint="Tabelle1.Designer.xml" GeneratedCode="Tabelle1.Designer.cs" />
-          <HostItem Name="Tabelle2" Code="Tabelle2.cs" CanonicalName="Tabelle2" DisplayName="Auswertung" Blueprint="Tabelle2.Designer.xml" GeneratedCode="Tabelle2.Designer.cs" />
-          <HostItem Name="Tabelle4" Code="Tabelle4.cs" CanonicalName="Tabelle4" DisplayName="Übersicht" Blueprint="Tabelle4.Designer.xml" GeneratedCode="Tabelle4.Designer.cs" />
-          <HostItem Name="Tabelle5" Code="Tabelle5.cs" CanonicalName="Tabelle5" DisplayName="Hallenplan" Blueprint="Tabelle5.Designer.xml" GeneratedCode="Tabelle5.Designer.cs" />
-          <HostItem Name="Tabelle6" Code="Tabelle6.cs" CanonicalName="Tabelle6" DisplayName="Hallenplan_Ergebnisse" Blueprint="Tabelle6.Designer.xml" GeneratedCode="Tabelle6.Designer.cs" />
-          <HostItem Name="Tabelle7" Code="Tabelle7.cs" CanonicalName="Tabelle7" DisplayName="Spielplan" Blueprint="Tabelle7.Designer.xml" GeneratedCode="Tabelle7.Designer.cs" />
-          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
+        <Host Name="Excel Document" Path=".\Auswertung.xlsx" GeneratedCodeNamespace="Auswertung" PublishedHash="F630675CD86BBDE4394BD75F4348CC37656B1ECD">
+          <HostItem Name="Tabelle1" Code="Tabelle1.cs" CanonicalName="Tabelle1" DisplayName="Erläuterungen" Blueprint="Tabelle1.Designer.xml" GeneratedCode="Tabelle1.Designer.cs" PublishedHash="A0E532C645FC04AC5B29342C57EEC37C4DF54272" />
+          <HostItem Name="Tabelle2" Code="Tabelle2.cs" CanonicalName="Tabelle2" DisplayName="Auswertung" Blueprint="Tabelle2.Designer.xml" GeneratedCode="Tabelle2.Designer.cs" PublishedHash="E5206E0688E7CC9D862F0F3672542106BBA47699" />
+          <HostItem Name="Tabelle4" Code="Tabelle4.cs" CanonicalName="Tabelle4" DisplayName="Übersicht" Blueprint="Tabelle4.Designer.xml" GeneratedCode="Tabelle4.Designer.cs" PublishedHash="EE33C02E748A2C4886F3979ECDA6FA4C3227C4FC" />
+          <HostItem Name="Tabelle5" Code="Tabelle5.cs" CanonicalName="Tabelle5" DisplayName="Hallenplan" Blueprint="Tabelle5.Designer.xml" GeneratedCode="Tabelle5.Designer.cs" PublishedHash="B91D9643A5DEE00542A959D2BF5C7E7A5E5FB4C6" />
+          <HostItem Name="Tabelle6" Code="Tabelle6.cs" CanonicalName="Tabelle6" DisplayName="Hallenplan_Ergebnisse" Blueprint="Tabelle6.Designer.xml" GeneratedCode="Tabelle6.Designer.cs" PublishedHash="40F5DF3D8C8AF2045DDEA7085D0929EE6AE6AD38" />
+          <HostItem Name="Tabelle7" Code="Tabelle7.cs" CanonicalName="Tabelle7" DisplayName="Spielplan" Blueprint="Tabelle7.Designer.xml" GeneratedCode="Tabelle7.Designer.cs" PublishedHash="1016804D21486089E3E5E4F036940F2281216C68" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" PublishedHash="B13059C4B47E28EDEEB73276A1C72C760F3B0153" />
         </Host>
       </FlavorProperties>
     </VisualStudio>
